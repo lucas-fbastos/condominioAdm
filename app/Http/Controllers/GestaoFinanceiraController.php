@@ -28,9 +28,9 @@ class GestaoFinanceiraController extends Controller
         try{
             $balancetes = $this->balanceteService->getAllPaged();
            
-            return \view('gestaoFinanceira.home', ['balancetes'=>$balancetes]);
+            return \view('gestaofinanceira.home', ['balancetes'=>$balancetes]);
         }catch(Exception $e){
-             return redirect('gestaoFinanceira')->with('status', 'Ocorreu um erro');
+             return redirect('gestaofinanceira')->with('status', 'Ocorreu um erro');
         }
     }
 
@@ -41,7 +41,7 @@ class GestaoFinanceiraController extends Controller
      */
     public function create()
     {
-        return view('gestaoFinanceira.insereBalancete');
+        return view('gestaofinanceira.insereBalancete');
     }
 
     /**
@@ -84,7 +84,7 @@ class GestaoFinanceiraController extends Controller
     public function edit($id)
     {
         $balancete = $this->balanceteService->getById($id);
-        return view('gestaoFinanceira.editaBalancete',['balancete'=>$balancete]);
+        return view('gestaofinanceira.editaBalancete',['balancete'=>$balancete]);
     }
 
     /**
@@ -113,7 +113,7 @@ class GestaoFinanceiraController extends Controller
         $auth = Auth::user();
         $input = (object) $request->only(['titulo']);
         $balancetes = $this->balanceteService->filter($input);
-        return view('gestaoFinanceira.home',['balancetes'=>$balancetes]);
+        return view('gestaofinanceira.home',['balancetes'=>$balancetes]);
     }
 
     /**
