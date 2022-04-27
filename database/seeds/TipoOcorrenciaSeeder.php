@@ -13,10 +13,11 @@ class TipoOcorrenciaSeeder extends Seeder
     {
         DB::table('tipo_ocorrencias')->insert(
             [
-                ["descricao_tipo" => "Entrega"],
-                ["descricao_tipo" => "Manutenção na rede Elétrica"],
-                ["descricao_tipo" => "Manutenção Hidraulica"],
-                ["descricao_tipo" => "Reclamação"]
+                ["descricao_tipo" => "Entrega","icon"=>"fa-solid fa-truck-ramp-box"],
+                ["descricao_tipo" => "Manutenção na rede Elétrica","icon"=>"fa-solid fa-bolt"],
+                ["descricao_tipo" => "Manutenção Hidraulica","icon"=>"fa-solid fa-droplet-slash"],
+                ["descricao_tipo" => "Reclamação","icon"=>"fa-solid fa-triangle-exclamation"],
+                ["descricao_tipo" => "Outros","icon"=>"fa-solid fa-comment"]
             ]
         );
     }
