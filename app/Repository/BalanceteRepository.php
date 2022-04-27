@@ -13,7 +13,7 @@ class BalanceteRepository extends GenericRepository{
 
     public function create($balanceteData){
         $balancete = new Balancete();
-        $balancete->titulo = $balanceteData->titulo;
+        $balancete->nome = $balanceteData->titulo;
         $balancete->descricao = $balanceteData->descricao;
         $balancete->path = $balanceteData->balancete;
         $balancete->users_id = $balanceteData->user_id;
@@ -25,7 +25,7 @@ class BalanceteRepository extends GenericRepository{
     }
 
     public function filter($filter){
-        $pages = $this->model::where('titulo','like','%'.$filter->titulo.'%')->orderBy('created_at','desc')->get();
+        $pages = $this->model::where('nome','like','%'.$filter->titulo.'%')->orderBy('created_at','desc')->get();
         return $pages;
     }
 
