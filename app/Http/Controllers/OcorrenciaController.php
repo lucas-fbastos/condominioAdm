@@ -27,7 +27,6 @@ class OcorrenciaController extends Controller
     {
         $tiposOcorrencia = $this->tipoOcorrenciaService->getAll();
         $ocorrencias = $this->ocorrenciaService->getAllPaged();
-        //dd($ocorrencias);
         return view('livroOcorrencias.home',['tiposOcorrencia'=>$tiposOcorrencia,'ocorrencias'=>$ocorrencias]);
     }
 
