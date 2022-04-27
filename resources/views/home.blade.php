@@ -6,17 +6,17 @@
             <div class="row">       
                 <div class="card m-2 border-success col-12 col-md-2 animated wobble ">
                     <div class="card-body">
-                        <div class="badge badge-success">5</div> novo(s) Comunicado(s) <i class="far fa-file-alt text-success"></i>
+                        <div class="badge badge-success">0</div> novo(s) Comunicado(s) <i class="far fa-file-alt text-success"></i>
                     </div>
                 </div>
                 <div class="card m-2  border-success col-12 col-md-2 animated wobble">
                     <div class="card-body">
-                        <div class="badge badge-success">1</div> novo(s) Balancete(s) <i class="fas fa-receipt text-success"></i>
+                        <div class="badge badge-success">0</div> novo(s) Balancete(s) <i class="fas fa-receipt text-success"></i>
                     </div>
                 </div>
                 <div class="card m-2  border-success col-12 col-md-2 animated wobble">
                     <div class="card-body">
-                        <div class="badge badge-success">2</div> nova(s) Enquete(s) <i class="fas fa-poll-h text-success"></i>
+                        <div class="badge badge-success">0</div> nova(s) Enquete(s) <i class="fas fa-poll-h text-success"></i>
                     </div>
                 </div>
             </div>
