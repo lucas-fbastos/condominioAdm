@@ -113,8 +113,7 @@ class GestaoFinanceiraController extends Controller
         $auth = Auth::user();
         $input = (object) $request->only(['titulo']);
         $balancetes = $this->balanceteService->filter($input);
-       // dd($balancetes);
-        return view('gestaofinanceira.home',['balancetes'=>$balancetes]);
+        return view('gestaoFinanceira.home',['balancetes'=>$balancetes]);
     }
 
     /**
