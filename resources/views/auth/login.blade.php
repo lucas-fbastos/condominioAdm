@@ -71,8 +71,9 @@
     </div>
 </div>
 @endsection
-
+@section('script')
 <script>
     var footer =  document.getElementById("footer");
     footer.classList.add("footer-bottom");    
 </script>
+@endsection
