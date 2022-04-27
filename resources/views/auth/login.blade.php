@@ -70,4 +70,8 @@
         </div>
     </div>
 </div>
+<script>
+    var footer =  document.getElementById("footer");
+    footer.classList.add("footer-bottom");    
+</script>
 @endsection

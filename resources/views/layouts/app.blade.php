@@ -78,7 +78,7 @@
             @yield('content')
         </main>
     </div>
-    <footer>
+    <footer id="footer">
         <div class="col-12 bg-success text-light text-center p-3">
             Condomínio Admin - Uso exclusivo de moradores da Chácara 10<br>
             <small>{{date('Y')}}</small> 

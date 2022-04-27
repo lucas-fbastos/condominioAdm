@@ -3,6 +3,9 @@
     src: url(/fonts/ArimaMadurai-Thin.ttf);
 }
 
+.footer-bottom{
+  position: absolute;
+}
 
 .home-img-size{
     content: url(/static_imgs/undraw_online_organizer_ofxm.svg);
