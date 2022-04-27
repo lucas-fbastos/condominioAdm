@@ -36,6 +36,24 @@ class OcorrenciaService{
     }
 
     public function getAllPaged(){
-        return $this->repository->allPaged(10);
-      }
+        return $this->repository->allPaged(5);
+    }
+
+    public function getById($id){
+        return $this->repository->getById($id);
+    }
+
+    public function delete($id){
+        try{
+            if($id != null && is_numeric($id)){
+                $ocorrencia = $this->getById($id);
+                if($ocorrencia){
+                    $ocorrencia->delete();
+                }
+            }
+          }catch(\Exception $e){
+              Log::error($e->getMessage());
+              throw $e;
+          }
+    }
 }

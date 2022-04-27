@@ -33,3 +33,5 @@ Route::post('/balancete/consulta','GestaoFinanceiraController@filter')->middlewa
 Route::get('/livroOcorrencias','OcorrenciaController@index')->middleware('auth')->name('livroOcorrencias');
 Route::get('/livroOcorrencias/cadastrar','OcorrenciaController@create')->middleware('auth');
 Route::post('/livroOcorrencias','OcorrenciaController@store')->middleware('auth')->name('insereOcorrencia');
+Route::delete('/livroOcorrencias/{id}','OcorrenciaController@delete')->middleware('auth');
+Route::post('/livroOcorrencias/consulta','OcorrenciaController@filter')->middleware('auth')->name('consultaOcorrencia');

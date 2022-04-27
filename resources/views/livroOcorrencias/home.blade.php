@@ -2,7 +2,7 @@
 @section('middle')
 <h1 class="title">Livro de Ocorrências</h1>
 <h6>Livro de registros do Condomínio - Apenas usuários autorizados podem fazer registros</h6>
-<form class=" mt-4 row " action="/ocorrencia/filtrar" method="POST">
+<form class=" mt-4 row " action="/livroOcorrencias/consulta" method="POST">
     @csrf
     <select class="form-control col-4" id="tipoOcorrencia" name="tipoOcorrencia">
         @foreach($tiposOcorrencia as $tipo)    
@@ -39,6 +39,16 @@
                 <span class="text-muted"> <i class="fas fa-clock"></i>&nbsp;{{$ocorrencia->created_at->format('d/m/y h:i:s')}}</span>
                 </div>
             </div>
+            @if(Auth::user()->perfil == 1)
+                <div>    
+                    <a class="btn col-4 btn-outline-success mt-2" href="/livroOcorrencias/edita/{{$ocorrencia->id}}"><i class="fas fa-edit"></i></a>
+                    <form action="/livroOcorrencias/{{$ocorrencia->id}}" method="POST" style="display:inline">
+                        {{ csrf_field() }}
+                        {{ method_field('DELETE') }}
+                        <button class="btn col-4 btn-outline-danger mt-2"><i class="fas fa-trash-alt"></i></button>
+                    </form>
+                </div>    
+            @endif
         @endforeach
     </div>
 </div>

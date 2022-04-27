@@ -73,6 +73,15 @@ class OcorrenciaController extends Controller
         //
     }
 
+    public function filter(Request $request)
+    {
+        $auth = Auth::user();
+        $input = (object) $request->only(['tipoOcorrencia']);
+        $ocorrencias = $this->ocorrenciaService->filter($input);
+        $tiposOcorrencia = $this->tipoOcorrenciaService->getAll();
+        return view('livroOcorrencias.home',['ocorrencias'=>$ocorrencias, 'tiposOcorrencia'=>$tiposOcorrencia]);
+    }
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -102,8 +111,9 @@ class OcorrenciaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function delete($id)
     {
-        //
+        $this->ocorrenciaService->delete($id);
+        return redirect('/livroOcorrencias');
     }
 }
