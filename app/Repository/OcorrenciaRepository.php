@@ -31,6 +31,15 @@ class OcorrenciaRepository extends GenericRepository{
       return $ocorrencia->save();
     }
 
+    public function update($data,$dataAtt)
+    {
+      $data->tipo_ocorrencias_id = $dataAtt->tipoOcorrencia;
+      $data->users_id = $dataAtt->user_id;
+      $data->data_ocorrencia= $dataAtt->dataOcorrencia;
+      $data->descricao = $dataAtt->descricao;
+      return $data->save();
+    }
+
     public function filter($filter){
         $pages = $this->model::where('tipo_ocorrencias_id',$filter->tipoOcorrencia)->orderBy('data_ocorrencia','desc')->get();
         return $pages;

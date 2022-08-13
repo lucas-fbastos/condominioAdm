@@ -70,7 +70,9 @@ class OcorrenciaController extends Controller
      */
     public function show($id)
     {
-        //
+        $ocorrencia = $this->ocorrenciaService->getById($id);
+        $tiposOcorrencia = $this->tipoOcorrenciaService->getAll();
+        return view('livroOcorrencias.insereOcorrencia',['tiposOcorrencia'=>$tiposOcorrencia,'ocorrencia'=>$ocorrencia]);
     }
 
     public function filter(Request $request)
@@ -102,7 +104,15 @@ class OcorrenciaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $ocorrencia = $this->ocorrenciaService->getById($id);
+        if($ocorrencia!=null){
+            $auth = Auth::user();
+            $input = (object) $request->only(['tipoOcorrencia','descricao','dataOcorrencia']);
+            $input->user_id = $auth->id;
+            $this->ocorrenciaService->update($ocorrencia,$input); 
+            return redirect('/livroOcorrencias'); 
+        }
+        return redirect('/livroOcorrencias'); 
     }
 
     /**

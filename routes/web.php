@@ -35,3 +35,5 @@ Route::get('/livroOcorrencias/cadastrar','OcorrenciaController@create')->middlew
 Route::post('/livroOcorrencias','OcorrenciaController@store')->middleware('auth')->name('insereOcorrencia');
 Route::delete('/livroOcorrencias/{id}','OcorrenciaController@delete')->middleware('auth');
 Route::post('/livroOcorrencias/consulta','OcorrenciaController@filter')->middleware('auth')->name('consultaOcorrencia');
+Route::get('/livroOcorrencias/edita/{id}','OcorrenciaController@show')->middleware('auth')->name('editaOcorrencia');
+Route::put('/livroOcorrencias/atualizar/{id}','OcorrenciaController@update')->middleware('auth')->name('atualizaOcorrencia');

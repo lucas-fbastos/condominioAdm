@@ -20,7 +20,8 @@
         <div class="col-lg-3 col-md-6 m-2 ">
             <div class="card shadow">
                 <div class="card-header">
-                    <p class="text-muted mt-2">Cadastrado por:
+                    <h2>{{$balancete->titulo}}</h2>
+                    <p class="text-muted mt-2">Por:
                         <strong class="text-capitalize">
                             {{$balancete->users->name}}
                         </strong>
@@ -29,7 +30,6 @@
                 </div>
                 <img class="card-img-top" src="{{asset('/static_imgs/undraw_contract_uy56.svg')}}" height="200px" alt="">
                 <div class="card-body">
-                    <h4 class="card-title text-capitalize">{{$balancete->titulo}}</h4>
                     <p class="card-text">{{$balancete->descricao}}</p>
                 </div>
                 <div class="card-footer">

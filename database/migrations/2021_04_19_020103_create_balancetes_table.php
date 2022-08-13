@@ -16,7 +16,7 @@ class CreateBalancetesTable extends Migration
         Schema::create('balancetes', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('nome')->unique();
+            $table->string('titulo')->unique();
             $table->string('path');
             $table->unsignedBigInteger('users_id')->unsigned();
             $table->foreign('users_id')->references('id')->on('users');

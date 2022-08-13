@@ -13,7 +13,7 @@ class BalanceteRepository extends GenericRepository{
 
     public function create($balanceteData){
         $balancete = new Balancete();
-        $balancete->nome = $balanceteData->titulo;
+        $balancete->titulo = $balanceteData->titulo;
         $balancete->descricao = $balanceteData->descricao;
         $balancete->path = $balanceteData->balancete;
         $balancete->users_id = $balanceteData->user_id;

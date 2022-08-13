@@ -31,6 +31,20 @@ class OcorrenciaService{
         }
     }
 
+    public function update($ocorrencia, $ocorrenciaAtt){
+        $tipoOcorrencia = $this->tipoOcorrenciaService->getById($ocorrenciaAtt->tipoOcorrencia);
+        $user = $this->userService->getById($ocorrenciaAtt->user_id);
+        if($user==null || $tipoOcorrencia ==null){
+          return;
+        }    
+        try{
+            return $this->repository->update($ocorrencia, $ocorrenciaAtt);
+        }catch(\Exception $e){
+            Log::error($e->getMessage());
+            throw $e;
+        }
+    }
+
     public function filter($filtro){
         return $this->repository->filter($filtro);
     }
