@@ -6,7 +6,7 @@
     <div class="list-group list-group-flush">
       <a href="/gestaoFinanceira" class="list-group-item list-group-item-action bg-light"><i class="fas fa-receipt text-success mr-2"></i>Gestão Financeira</a>
       <a href="/livroOcorrencias" class="list-group-item list-group-item-action bg-light"><i class="fas fa-book text-success mr-2"></i>Livro de Ocorrências </a>
-      <a href="#" class="list-group-item list-group-item-action bg-light">Comunicados Oficiais</a>
+      <a href="/comunicado" class="list-group-item list-group-item-action bg-light">Comunicados Oficiais</a>
       <a href="#" class="list-group-item list-group-item-action bg-light">Fale com o Síndico</a>
       <a href="#" class="list-group-item list-group-item-action bg-light">Classificados</a>
       <a href="#" class="list-group-item list-group-item-action bg-light">Álbum de fotos</a>
