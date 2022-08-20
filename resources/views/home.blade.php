@@ -21,9 +21,10 @@
                 </div>
             </div>
 
+           
+            @if($lastBalancete !=null && sizeof($lastBalancete)>0)
             <h4 class="mt-3">Último Balancete Cadastrado</h4>
             <div class="row text-center ">  
-            @if($lastBalancete !=null && sizeof($lastBalancete)>0)
                 <div class="col-lg-4 col-md-6 mb-2 ">
                     <div class="card shadow">
                         <div class="card-header">
