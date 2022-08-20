@@ -21,11 +21,11 @@
                 </div>
             </div>
 
-           
-            @if($lastBalancete !=null && sizeof($lastBalancete)>0)
-            <h4 class="mt-3">Último Balancete Cadastrado</h4>
+         
             <div class="row text-center ">  
+            @if($lastBalancete !=null && sizeof($lastBalancete)>0)
                 <div class="col-lg-4 col-md-6 mb-2 ">
+                <h4 class="mt-3">Último Balancete Cadastrado</h4>
                     <div class="card shadow">
                         <div class="card-header">
                             <p class="text-muted mt-2">Cadastrado por:
@@ -56,7 +56,7 @@
             @endif
             @if($ocorrencias->count()>0)
                 <div class="col-lg6 col-md-6">
-                <h4>Últimos Registros do livro de ocorrências</h4>
+                <h4 class="mt-3">Últimos Registros do livro de ocorrências</h4>
                     <div class="jumbotron bg-light  shadow">
                         
                         @foreach($ocorrencias as $ocorrencia)

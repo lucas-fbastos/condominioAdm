@@ -6,7 +6,7 @@
     <div class="list-group list-group-flush">
       <a href="/gestaoFinanceira" class="list-group-item list-group-item-action bg-light"><i class="fas fa-receipt text-success mr-2"></i>Gestão Financeira</a>
       <a href="/livroOcorrencias" class="list-group-item list-group-item-action bg-light"><i class="fas fa-book text-success mr-2"></i>Livro de Ocorrências </a>
-      <a href="/comunicado" class="list-group-item list-group-item-action bg-light"><i class="fa-solid fa-comment-dots text-success mr-2"></i>Comunicados Oficiais</a>
+      <a href="" class="list-group-item list-group-item-action bg-light"><i class="fa-solid fa-comment-dots text-success mr-2"></i>Comunicados Oficiais</a>
       @if(Auth::user()->perfil == 1 || Auth::user()->perfil == 2  )  
         <a href="/register" class="list-group-item list-group-item-action bg-light"><i class="fas fa-user text-success mr-2"></i>Cadastrar Usuário</a>
       @endif

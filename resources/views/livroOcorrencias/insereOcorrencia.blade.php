@@ -2,11 +2,11 @@
 @section('middle')
 <h1 class="title">Livro de Ocorrências</h1>
 <h6>Livro de registros do Condomínio - Apenas usuários autorizados podem fazer registros</h6>
-<form class=" mt-4" 
+<form class=" mt-4" method="POST"
     @if(!isset($ocorrencia)) 
-        action="{{route('insereOcorrencia')}}"
+        action="{{route('insereOcorrencia')}} ">
     @else
-        action="/livroOcorrencias/atualizar/{{$ocorrencia->id}}" method="POST">
+        action="/livroOcorrencias/atualizar/{{$ocorrencia->id}}" >
         @method('PUT')
     @endIf
     @csrf
@@ -38,8 +38,7 @@
     <div class="form-row">
         <div class="form-group col-md-6">
             <label for="descricao">Descrição da Ocorrência <span class="text-danger" required>*</span></label>
-            <textarea name="descricao" id="descricao" cols="30" rows="10" class="form-control">@if(isset($ocorrencia)){{$ocorrencia->descricao}}@endif
-            </textarea> 
+            <textarea name="descricao" id="descricao" cols="30" rows="10" class="form-control">@if(isset($ocorrencia)){{$ocorrencia->descricao}}@endif</textarea> 
         </div>
     </div>
     <button type="submit" class="btn btn-success btn-block col-6">Salvar</button>
